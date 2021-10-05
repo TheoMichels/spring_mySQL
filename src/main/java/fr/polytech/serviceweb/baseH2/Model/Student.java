@@ -1,10 +1,20 @@
-package fr.polytech.serviceweb.baseH2.model;
+package fr.polytech.serviceweb.baseH2.Model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="STUDENTS")
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="student_id")
     private int id;
+    @Column(name="name")
     private String name;
+    @Column(name="age")
     private int age;
+    @Column(name="school_year")
     private String school_year;
 
     public Student(){}
