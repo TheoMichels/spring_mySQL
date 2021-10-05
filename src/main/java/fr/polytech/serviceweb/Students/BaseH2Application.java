@@ -1,4 +1,4 @@
-package fr.polytech.serviceweb.baseH2;
+package fr.polytech.serviceweb.Students;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

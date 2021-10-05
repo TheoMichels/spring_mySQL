@@ -1,4 +1,4 @@
-package fr.polytech.serviceweb.baseH2;
+package fr.polytech.serviceweb.Students;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package fr.polytech.serviceweb.baseH2.Model;
+package fr.polytech.serviceweb.Students.Model;
 
 import javax.persistence.*;
 

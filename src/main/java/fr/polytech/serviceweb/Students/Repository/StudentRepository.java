@@ -1,6 +1,6 @@
-package fr.polytech.serviceweb.baseH2.Repository;
+package fr.polytech.serviceweb.Students.Repository;
 
-import fr.polytech.serviceweb.baseH2.Model.Student;
+import fr.polytech.serviceweb.Students.Model.Student;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
