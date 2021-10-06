@@ -2,7 +2,6 @@ package fr.polytech.serviceweb.Students.Controller;
 
 import fr.polytech.serviceweb.Students.Model.Student;
 import fr.polytech.serviceweb.Students.Repository.StudentRepository;
-import fr.polytech.serviceweb.Students.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
