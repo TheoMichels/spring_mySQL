@@ -3,7 +3,7 @@ package fr.polytech.serviceweb.Students.Model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="STUDENTS")
+@Table(name="student")
 public class Student {
 
     @Id
@@ -16,15 +16,6 @@ public class Student {
     private int age;
     @Column(name="school_year")
     private String school_year;
-
-    public Student(){}
-
-    public Student(int id, String name, int age, String school_year) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.school_year = school_year;
-    }
 
     public int getId() {
         return id;
@@ -58,8 +49,4 @@ public class Student {
         this.school_year = school_year;
     }
 
-    @Override
-    public String toString() {
-        return "Student " + id + " :" + name + '/' + age + '/' + school_year;
-    }
 }
