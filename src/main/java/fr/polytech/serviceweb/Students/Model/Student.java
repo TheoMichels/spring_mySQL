@@ -1,12 +1,22 @@
 package fr.polytech.serviceweb.Students.Model;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
+//create entity and set table name
 @Entity
 @Table(name="student")
+//allow to update only column which changed and not every column
+@DynamicUpdate
 public class Student {
 
+    //binding all column of database
+
+    // primary key
     @Id
+    //id is generated automatically
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="student_id")
     private int id;

@@ -12,6 +12,7 @@ import java.util.Optional;
 @RestController
 public class StudentController {
 
+    // dependency injection
     @Autowired
     private StudentRepository studentRepository;
 
