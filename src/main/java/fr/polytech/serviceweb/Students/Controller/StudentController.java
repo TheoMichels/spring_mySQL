@@ -5,6 +5,7 @@ import fr.polytech.serviceweb.Students.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
@@ -26,7 +27,12 @@ public class StudentController {
         return studentRepository.findById(id);
     }
 
+    @PostMapping("/addStudent")
     public Student addStudent(Student student) {
         return studentRepository.save(student);
+    }
+
+    public void deleteStudent(int id) {
+        studentRepository.deleteById(id);
     }
 }

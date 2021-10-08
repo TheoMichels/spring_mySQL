@@ -17,15 +17,9 @@ public class StudentsApplication implements CommandLineRunner {
 		SpringApplication.run(StudentsApplication.class, args);
 	}
 
-	//testing methods
 	@Override
 	public void run(String... args) throws Exception {
 		Iterable<Student> students = studentController.getStudents();
 		students.forEach(e -> System.out.println(e.getName()));
-
-		Student existingStudent = studentController.getStudentById(3).get();
-
-		existingStudent.setAge(26);
-		studentController.addStudent(existingStudent);
 	}
 }
