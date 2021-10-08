@@ -3,10 +3,7 @@ package fr.polytech.serviceweb.Students.Controller;
 import fr.polytech.serviceweb.Students.Model.Student;
 import fr.polytech.serviceweb.Students.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -27,12 +24,13 @@ public class StudentController {
         return studentRepository.findById(id);
     }
 
-    @PostMapping("/addStudent")
-    public Student addStudent(Student student) {
+    @PostMapping("/addStudent/{student}")
+    public Student addStudent(@PathVariable(value="student") Student student) {
         return studentRepository.save(student);
     }
 
-    public void deleteStudent(int id) {
+    @DeleteMapping("/deleteStudent/{id}")
+    public void deleteStudent(@PathVariable(value ="id") int id) {
         studentRepository.deleteById(id);
     }
 }
